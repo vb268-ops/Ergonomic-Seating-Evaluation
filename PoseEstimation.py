@@ -59,7 +59,7 @@ class Detector:
 			y.append(keys[i][1])
 			z.append(keys[i][2])
 
-		#2D SCATTER PLOT OF KEYPOINTS
+		#3D SCATTER PLOT OF KEYPOINTS
 		#plt.rcParams["figure.figsize"] = [7.00, 3.50]
 		#plt.rcParams["figure.autolayout"] = True
 		#fig = plt.figure()
@@ -67,7 +67,7 @@ class Detector:
 		#ax.scatter3D(x, y, z, c='blue');
 		#plt.savefig("test.png")
 
-		#3D SCATTER PLOT OF KEYPOINTS
+		#2D SCATTER PLOT OF KEYPOINTS
 		#fig = plt.scatter(x, y, c='blue')
 		#plt.savefig("testo.png")
 
