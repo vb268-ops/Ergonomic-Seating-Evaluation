@@ -73,29 +73,19 @@ class Detector:
 
 		#ALL FOR ANGLE BETWEEN BACK AND THIGH
 		hips = []
-		hips.append((x[11]+x[12])/2)
-		hips.append((y[11]+y[12])/2)
-		hips.append((z[11]+z[12])/2)
+		hips.append((x[11]+x[12])/2); hips.append((y[11]+y[12])/2); hips.append((z[11]+z[12])/2)
 
 		shoulder = []
-		shoulder.append((x[5]+x[6])/2)
-		shoulder.append((y[5]+y[6])/2)
-		shoulder.append((z[5]+z[6])/2)
+		shoulder.append((x[5]+x[6])/2); shoulder.append((y[5]+y[6])/2); shoulder.append((z[5]+z[6])/2)
 
-		back = []
-		back.append(shoulder[0]-hips[0])
-		back.append(shoulder[1]-hips[1])
-		back.append(shoulder[2]-hips[2])
+		back = [] 
+		back.append(shoulder[0]-hips[0]); back.append(shoulder[1]-hips[1]); back.append(shoulder[2]-hips[2])
 
 		knee1_back = []
-		knee1_back.append(x[13]-x[11])
-		knee1_back.append(y[13]-y[11])
-		knee1_back.append(z[13]-z[11])
+		knee1_back.append(x[13]-x[11]); knee1_back.append(y[13]-y[11]); knee1_back.append(z[13]-z[11])
 
 		knee2_back = []
-		knee2_back.append(x[14]-x[12])
-		knee2_back.append(y[14]-y[12])
-		knee2_back.append(z[14]-z[12])
+		knee2_back.append(x[14]-x[12]); knee2_back.append(y[14]-y[12]); knee2_back.append(z[14]-z[12])
 
 		angle_knee1_back = (back[0]*knee1_back[0] + back[1]*knee1_back[1] + back[2]*knee1_back[2]) / (math.sqrt((back[0]**2) + (back[1]**2) + (back[2]**2)) * math.sqrt((knee1_back[0]**2) + (knee1_back[1]**2) + (knee1_back[2]**2)))
 		angle_knee1_back = (math.acos(angle_knee1_back)*180)/math.pi
