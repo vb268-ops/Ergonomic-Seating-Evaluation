@@ -107,24 +107,16 @@ class Detector:
 
 		#ALL FOR ANGLE BETWEEN THIGH AND SHIN
 		knee1_shin = []
-		knee1_shin.append(x[11]-x[13])
-		knee1_shin.append(y[11]-y[13])
-		knee1_shin.append(z[11]-z[13])
+		knee1_shin.append(x[11]-x[13]); knee1_shin.append(y[11]-y[13]); knee1_shin.append(z[11]-z[13])
 
 		knee2_shin = []
-		knee2_shin.append(x[12]-x[14])
-		knee2_shin.append(y[12]-y[14])
-		knee2_shin.append(z[12]-z[14])
+		knee2_shin.append(x[12]-x[14]); knee2_shin.append(y[12]-y[14]); knee2_shin.append(z[12]-z[14])
 
 		shin1 = []
-		shin1.append(x[15]-x[13])
-		shin1.append(y[15]-y[13])
-		shin1.append(z[15]-z[13])
+		shin1.append(x[15]-x[13]); shin1.append(y[15]-y[13]); shin1.append(z[15]-z[13])
 
 		shin2 = []
-		shin2.append(x[16]-x[14])
-		shin2.append(y[16]-y[14])
-		shin2.append(z[16]-z[14])
+		shin2.append(x[16]-x[14]); shin2.append(y[16]-y[14]); shin2.append(z[16]-z[14])
 
 		angle_knee1_shin = (shin1[0]*knee1_shin[0] + shin1[1]*knee1_shin[1] + shin1[2]*knee1_shin[2]) / (math.sqrt((shin1[0]**2) + (shin1[1]**2) + (shin1[2]**2)) * math.sqrt((knee1_shin[0]**2) + (knee1_shin[1]**2) + (knee1_shin[2]**2)))
 		angle_knee1_shin = (math.acos(angle_knee1_shin)*180)/math.pi
